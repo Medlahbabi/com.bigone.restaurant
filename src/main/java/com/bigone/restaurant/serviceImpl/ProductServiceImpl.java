@@ -12,10 +12,12 @@ import com.bigone.restaurant.utils.RestaurantUtils;
 import com.bigone.restaurant.wrapper.ProductWrapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -117,7 +119,8 @@ public class ProductServiceImpl implements ProductService {
         //System.out.println(RestaurantConstants .SOMETHING_WENT_WRONG);
         return RestaurantUtils.getResponseEntity(RestaurantConstants.SOMETHING_WENT_WRONG, HttpStatus.INTERNAL_SERVER_ERROR);
     }
-
+    @Modifying
+    @Transactional
     @Override
     public ResponseEntity<String> updateStatus(Map<String, String> requestMap) {
         try {
@@ -134,6 +137,27 @@ public class ProductServiceImpl implements ProductService {
         }
         return RestaurantUtils.getResponseEntity(RestaurantConstants.SOMETHING_WENT_WRONG, HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
+    @Override
+    public ResponseEntity<List<ProductWrapper>> getByCategory(Integer id) {
+        try {
+            return new ResponseEntity<>(productDao.getProductByCategory(id), HttpStatus.OK);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return new ResponseEntity<>(new ArrayList<>(), HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @Override
+    public ResponseEntity<ProductWrapper> getProductById(Integer id) {
+        try {
+          return new ResponseEntity<>(productDao.getProductById(id),HttpStatus.OK);
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+        return new ResponseEntity<>(new ProductWrapper(),HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
 
     private Product getProductFromMap(Map<String, String> requestMap, boolean isAdd) {
         Product product = new Product();
