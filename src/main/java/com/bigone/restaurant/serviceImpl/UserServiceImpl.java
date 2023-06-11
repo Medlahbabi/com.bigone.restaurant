@@ -43,9 +43,11 @@ public class UserServiceImpl implements UserService {
 
 
       if (validateSignUpMap(requestMap)){
+          //System.out.println("inside validaSignUpMap");
           User user=userDao.findByEmailId(requestMap.get("email"));
           if (Objects.isNull(user)){
             userDao.save(getUserFromMap(requestMap));
+              //System.out.println("Successfully  Registered.");
             return RestaurantUtils.getResponseEntity("Successfully Registered.",HttpStatus.OK);
           }
           else {
@@ -53,11 +55,13 @@ public class UserServiceImpl implements UserService {
           }
       }
       else{
+          //System.out.println(RestaurantConstants.INVALID_DATA);
           return RestaurantUtils.getResponseEntity(RestaurantConstants.INVALID_DATA, HttpStatus.BAD_REQUEST);
       }
       }catch (Exception ex){
           ex.printStackTrace();
       }
+        //System.out.println(RestaurantConstants.SOMETHING_WENT_WRONG);
       return RestaurantUtils.getResponseEntity(RestaurantConstants.SOMETHING_WENT_WRONG,HttpStatus.INTERNAL_SERVER_ERROR);
     }
 

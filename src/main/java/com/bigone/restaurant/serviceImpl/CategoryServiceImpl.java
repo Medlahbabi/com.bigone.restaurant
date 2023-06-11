@@ -39,6 +39,7 @@ public class CategoryServiceImpl implements CategoryService {
         }catch (Exception ex){
            ex.printStackTrace();
         }
+        //System.out.println(RestaurantConstants.SOMETHING_WENT_WRONG);
         return RestaurantUtils.getResponseEntity(RestaurantConstants.SOMETHING_WENT_WRONG, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 

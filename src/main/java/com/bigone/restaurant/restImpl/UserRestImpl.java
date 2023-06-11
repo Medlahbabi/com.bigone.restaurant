@@ -21,10 +21,12 @@ public class UserRestImpl implements UserRest {
     @Override
     public ResponseEntity<String> signUp(Map<String, String> requestMap) {
        try {
+           //System.out.println("inside userRestImpl");
          return  userService.signUp(requestMap);
        }catch (Exception ex){
            ex.printStackTrace();
        }
+        //System.out.println("Before return");
         return RestaurantUtils.getResponseEntity(RestaurantConstants.SOMETHING_WENT_WRONG, HttpStatus.INTERNAL_SERVER_ERROR);
     }
     @Override
