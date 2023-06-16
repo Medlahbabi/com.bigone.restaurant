@@ -136,6 +136,7 @@ public class BillServiceImpl implements BillService {
                 return new ResponseEntity<>(byteArray, HttpStatus.OK);
             }
 
+
         } catch (Exception ex) {
             ex.printStackTrace();
         }

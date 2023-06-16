@@ -12,6 +12,7 @@ import java.util.List;
 public interface ProductDao extends JpaRepository<Product, Integer>  {
     List<ProductWrapper> getAllProduct();
 
+
     @Modifying
     @Transactional
     Integer updateProductStatus(@Param("status") String status, @Param("id") Integer id);

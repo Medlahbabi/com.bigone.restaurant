@@ -49,6 +49,7 @@ public class BillRestImpl implements BillRest {
         return null;
     }
 
+
     @Override
     public ResponseEntity<String> deleteBill(Integer id) {
     try {

@@ -9,6 +9,7 @@ import java.util.Map;
 
 @RequestMapping(path = "/bill")
 public interface BillRest {
+
     @PostMapping(path = "/generateReport")
     public ResponseEntity<String> generateReport(@RequestBody Map<String, Object> requestMap);
     @GetMapping(path = "/getBills")

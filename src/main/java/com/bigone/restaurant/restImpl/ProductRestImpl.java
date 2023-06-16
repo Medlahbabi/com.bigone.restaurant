@@ -18,6 +18,7 @@ import java.util.Map;
 
 @RestController
 public class ProductRestImpl implements ProductRest {
+
     @Autowired
     ProductService productService;
     @Override

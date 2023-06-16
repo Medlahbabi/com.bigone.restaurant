@@ -22,6 +22,7 @@ public class RestaurantUtils {
     public RestaurantUtils() {
     }
 
+
     public static ResponseEntity<String> getResponseEntity(String reponseMessage, HttpStatus httpStatus) {
         return new ResponseEntity<String>("{\"message\":\"" + reponseMessage + "\"}", httpStatus);
     }
