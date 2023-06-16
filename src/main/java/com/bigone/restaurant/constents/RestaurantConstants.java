@@ -8,4 +8,3 @@ public class RestaurantConstants {
     public static final String STORE_LOCATION = "E:\\Retaurant-Mohamed-Lahbabi-master\\com.bigone.restaurant\\RestaurantStoredFiles";
 
 }
-
