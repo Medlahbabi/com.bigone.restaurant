@@ -14,7 +14,6 @@ public class UserWrapper {
     private String status;
 
 
-
     public UserWrapper(Integer id, String name, String email, String contactNumber, String status) {
         this.id = id;
         this.name = name;
