@@ -13,7 +13,6 @@ import java.util.List;
 
 @Service
 public class EmailUtil {
-
     @Autowired
     private JavaMailSender emailSender;
     public void sendSimpleMessage(String to, String subject, String text, List<String>list){

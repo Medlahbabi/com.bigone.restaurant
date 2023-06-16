@@ -23,7 +23,6 @@ import java.util.Optional;
 public class CategoryServiceImpl implements CategoryService {
     @Autowired
     CategoryDao categoryDao;
-
     @Autowired
     JwtFilter jwtFilter;
     @Override

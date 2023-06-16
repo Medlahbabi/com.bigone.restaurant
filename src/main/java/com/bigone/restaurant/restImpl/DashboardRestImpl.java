@@ -11,6 +11,7 @@ import java.util.Map;
 @RestController
 public class DashboardRestImpl implements DashboardRest {
 
+
     @Autowired
     DashboardService dashboardService;
     @Override

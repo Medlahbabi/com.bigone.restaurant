@@ -18,7 +18,6 @@ public class DashboardServiceImpl implements DashboardService {
     CategoryDao categoryDao;
     @Autowired
     ProductDao productDao;
-
     @Autowired
     BillDao billDao;
     @Override

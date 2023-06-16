@@ -50,6 +50,7 @@ public class BillRestImpl implements BillRest {
     }
 
 
+
     @Override
     public ResponseEntity<String> deleteBill(Integer id) {
     try {

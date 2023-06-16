@@ -18,7 +18,6 @@ import java.util.Objects;
 public class CustomerUserDetailsService implements UserDetailsService {
 
     @Autowired
-
     UserDao userDao;
 
     private com.bigone.restaurant.POJO.User userDatails;

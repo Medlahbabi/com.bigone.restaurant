@@ -17,7 +17,6 @@ import java.io.Serializable;
 @DynamicInsert
 @Table(name = "product")
 public class Product implements Serializable {
-
     private static final long serialVersionUID = 123456L;
 
     @Id

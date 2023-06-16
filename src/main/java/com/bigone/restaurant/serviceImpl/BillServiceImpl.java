@@ -135,8 +135,6 @@ public class BillServiceImpl implements BillService {
                 byteArray = getByteArray(filepath);
                 return new ResponseEntity<>(byteArray, HttpStatus.OK);
             }
-
-
         } catch (Exception ex) {
             ex.printStackTrace();
         }

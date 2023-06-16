@@ -23,6 +23,7 @@ public class CategoryRestImpl implements CategoryRest {
     @Autowired
     CategoryDao categoryDao;
 
+
     @Override
     public ResponseEntity<String> addNewCategory(Map<String, String> requestMap) {
        try {

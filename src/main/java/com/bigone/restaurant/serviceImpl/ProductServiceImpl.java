@@ -32,7 +32,6 @@ public class ProductServiceImpl implements ProductService {
 
     @Autowired
     AuthenticationManager authenticationManager;
-
     @Autowired
     com.bigone.restaurant.JWT.JwtUtil jwtUtil;
 

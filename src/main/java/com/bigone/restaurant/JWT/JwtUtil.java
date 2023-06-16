@@ -15,7 +15,6 @@ import java.util.function.Function;
 public class JwtUtil {
     private String secret = "btechdays";
 
-
     public String extractUsername(String token){
         return extractClamis(token , Claims::getSubject);
     }

@@ -28,7 +28,6 @@ public class UserServiceImpl implements UserService {
     UserDao userDao;
     @Autowired
     AuthenticationManager authenticationManager;
-
     @Autowired
     CustomerUserDetailsService customerUserDetailsService;
     @Autowired

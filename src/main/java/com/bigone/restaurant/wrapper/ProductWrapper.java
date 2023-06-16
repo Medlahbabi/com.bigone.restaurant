@@ -14,7 +14,6 @@ public class ProductWrapper {
     Integer categoryId;
     String categoryName;
 
-
     public ProductWrapper(Integer id, String name, String description, Integer price, String status, Integer categoryId, String categoryName) {
         this.id = id;
         this.name = name;
