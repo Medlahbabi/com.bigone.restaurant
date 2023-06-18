@@ -31,7 +31,6 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-
 @Slf4j
 @Service
 public class BillServiceImpl implements BillService {
@@ -84,6 +83,7 @@ public class BillServiceImpl implements BillService {
               table.setWidthPercentage(100);
               addTableHeader(table);
 
+              // Print table data
               JSONArray jsonArray=RestaurantUtils.getJsonArrayFromString((String) requestMap.get("productDetails"));
               for (int i = 0; i < jsonArray.length(); i++) {
                   addRows(table, RestaurantUtils.getMapFromJson(jsonArray.getString(i)));

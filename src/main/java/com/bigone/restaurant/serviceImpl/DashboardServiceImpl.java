@@ -14,6 +14,7 @@ import java.util.Map;
 
 @Service
 public class DashboardServiceImpl implements DashboardService {
+
     @Autowired
     CategoryDao categoryDao;
     @Autowired

@@ -17,6 +17,7 @@ import java.util.Objects;
 @Service
 public class CustomerUserDetailsService implements UserDetailsService {
 
+
     @Autowired
     UserDao userDao;
 
