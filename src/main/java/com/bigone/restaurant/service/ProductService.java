@@ -8,7 +8,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.Map;
 
-
 public interface ProductService {
     ResponseEntity<String> addNewProduct(Map<String, String> requestMap);
 

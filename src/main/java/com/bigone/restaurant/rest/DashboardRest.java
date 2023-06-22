@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.Map;
-
-
 @RequestMapping(path = "/dashboard")
 
 public interface DashboardRest {

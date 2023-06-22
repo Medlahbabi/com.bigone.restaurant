@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
-
-
 @RequestMapping(path = "/product")
 public interface ProductRest {
     @PostMapping(path = "/add")

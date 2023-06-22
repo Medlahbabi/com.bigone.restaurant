@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UserWrapper {
 
-
     private  Integer id;
     private String name;
     private String  email;

@@ -18,8 +18,6 @@ import java.io.Serializable;
 @Table(name = "product")
 public class Product implements Serializable {
     private static final long serialVersionUID = 123456L;
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")

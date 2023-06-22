@@ -17,7 +17,6 @@ import java.util.Map;
 import static org.aspectj.weaver.tools.cache.SimpleCacheFactory.path;
 @Slf4j
 public class RestaurantUtils {
-
     public RestaurantUtils() {
     }
     public static ResponseEntity<String> getResponseEntity(String reponseMessage, HttpStatus httpStatus) {
